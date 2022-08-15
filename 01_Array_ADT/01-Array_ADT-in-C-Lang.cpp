@@ -3,6 +3,14 @@
  *  Array ADT :
  *      Here we are going to create an Array Data Structure from Scratch in C Language. We also going to covert this C code to CPP code in the next file.
  *
+ *
+ *  Details about the Functions :
+ *
+ *  Display() -> It will print all the Array element one by one.
+ *  Add() / append() -> It's basically add the element to the end of the array.
+ *  Insert() -> It will insert a number at any given index.
+ *
+ *
  *	 Notes:
  *  Demo Array data : 10, 20, 30, 40, 50
  **************************************************************************************************************************/
@@ -17,8 +25,8 @@ struct Array
     int length;
 };
 
-// Struct for Displaying the Array :
-void display(Array arr)
+// Function Displaying the Array :
+void Display(Array arr)
 {
     int i;
     cout << "Elemnts are : ";
@@ -27,7 +35,17 @@ void display(Array arr)
         cout << arr.A[i] << "   ";
     }
     cout << endl;
-};
+}
+
+// Function for Add / Append:
+void append(Array *arr, int x)
+{
+    if (arr->length < arr->size)
+    {
+        arr->A[arr->length] = x;
+        arr->length++;
+    }
+}
 
 int main()
 {
@@ -56,7 +74,13 @@ int main()
     Array arr = {{2, 3, 4, 5, 6}, 20, 5};
 
     // Displaying the Array:
-    display(arr);
+    Display(arr);
+
+    // Calling the append() function:
+    append(&arr, 20);
+
+    // Displaying the Array:
+    Display(arr);
 
     return 0;
 }
