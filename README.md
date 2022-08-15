@@ -67,9 +67,9 @@ So, data structure and a set of operations together we can call it ADT.
 3. length (Number of elemnets)
 
 **Operations :**
-1. display();
-2. add() / append();
-3. insert(index X);
+1. Display();           --> O(n);
+2. add() / append();    --> O(1);
+3. insert(index X);     --> O(n);
 4. delete(index);
 5. search(X);
 6. get(index);
