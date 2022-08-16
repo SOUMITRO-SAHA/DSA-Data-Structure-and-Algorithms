@@ -114,7 +114,6 @@ Elemnts are : 2   3   4   5   6
 ## **Add() / append() function :**
 
 ```cpp
-
 // Function for Add / Append:
 void append(Array *arr, int x)
 {
@@ -127,6 +126,7 @@ void append(Array *arr, int x)
 ```
 
 ##### `Main ()` :
+
 ```cpp
 int main(){
     Array arr = {{2, 3, 4, 5, 6}, 20, 5};
@@ -145,8 +145,61 @@ int main(){
 ```
 
 #### Output :
+
 ```bash
 Elemnts are : 2   3   4   5   6   
 Elemnts are : 2   3   4   5   6   20
 ```
 
+## **Insert() function :**
+
+```cpp
+// Function for Insert :
+void insert(Array *arr, int index, int x)
+{
+    if (index >= 0 && index <= arr->length)
+    {
+        for (int i = arr->length; i > index; i--)
+        {
+            // Shifting the Elements
+            arr->A[i] = arr->A[i - 1];
+        }
+        arr->A[index] = x;
+        arr->length++;
+    }
+}
+```
+
+##### `main ()` :
+
+```cpp
+int main()
+{
+    Array arr = {{2, 3, 4, 5, 6}, 20, 5};
+
+    // Displaying the Array:
+    Display(arr);
+
+    // Calling the append() function:
+    append(&arr, 20);
+
+    // Displaying the Array after append() function:
+    Display(arr);
+
+    // Calling the Insert() function :
+    insert(&arr, 3, 33); // Inserting 33 at Index 3.
+
+    // Displaying the Array after inserting 33 at index 3:
+    Display(arr);
+
+    return 0;
+}
+```
+
+#### Output:
+
+```bash
+Elemnts are : 2   3   4   5   6   
+Elemnts are : 2   3   4   5   6   20   
+Elemnts are : 2   3   4   33   5   6   20  
+```

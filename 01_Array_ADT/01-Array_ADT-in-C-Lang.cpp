@@ -47,6 +47,21 @@ void append(Array *arr, int x)
     }
 }
 
+// Function for Insert :
+void insert(Array *arr, int index, int x)
+{
+    if (index >= 0 && index <= arr->length)
+    {
+        for (int i = arr->length; i > index; i--)
+        {
+            // Shifting the Elements
+            arr->A[i] = arr->A[i - 1];
+        }
+        arr->A[index] = x;
+        arr->length++;
+    }
+}
+
 int main()
 {
     // Method -1:
@@ -78,6 +93,12 @@ int main()
 
     // Calling the append() function:
     append(&arr, 20);
+
+    // Displaying the Array after append() function:
+    Display(arr);
+
+    // Calling the Insert() function :
+    insert(&arr, 3, 33); // Inserting 33 at Index 3.
 
     // Displaying the Array:
     Display(arr);
