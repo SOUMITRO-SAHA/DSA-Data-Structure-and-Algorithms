@@ -155,7 +155,7 @@ Elemnts are : 2   3   4   5   6   20
 
 ```cpp
 // Function for Insert :
-void insert(Array *arr, int index, int x)
+void Insert(Array *arr, int index, int x)
 {
     if (index >= 0 && index <= arr->length)
     {
@@ -180,14 +180,55 @@ int main()
     // Displaying the Array:
     Display(arr);
 
-    // Calling the append() function:
-    append(&arr, 20);
+    // Calling the Insert() function :
+    Insert(&arr, 3, 33); // Inserting 33 at Index 3.
 
-    // Displaying the Array after append() function:
+    // Displaying the Array after inserting 33 at index 3:
     Display(arr);
 
-    // Calling the Insert() function :
-    insert(&arr, 3, 33); // Inserting 33 at Index 3.
+    return 0;
+}
+```
+#### Output:
+
+```bash
+Elemnts are : 2   3   4   5   6   
+Elemnts are : 2   3   4   33   5   6 
+```
+
+## **Delete() function :**
+
+```cpp
+// Function for Delete() function :
+int Delete(Array *arr, int index)
+{
+    int x = 0;
+    if (index >= 0 && index <= arr->length - 1)
+    {
+        x = arr->A[index];
+        for (int i = index; i < arr->length - 1; i++)
+        {
+            arr->A[i] = arr->A[i + 1];
+        }
+        arr->length--;
+        return x;
+    }
+    return 0;
+}
+```
+
+##### `main ()` :
+
+```cpp
+int main()
+{
+    Array arr = {{2, 3, 4, 5, 6}, 20, 5};
+
+    // Displaying the Array:
+    Display(arr);
+
+    // Calling the Delete() function :
+    Delete(&arr, 3); //It will delete the element at index 3.
 
     // Displaying the Array after inserting 33 at index 3:
     Display(arr);
@@ -200,6 +241,5 @@ int main()
 
 ```bash
 Elemnts are : 2   3   4   5   6   
-Elemnts are : 2   3   4   5   6   20   
-Elemnts are : 2   3   4   33   5   6   20  
+Elemnts are : 2   3   4   6
 ```
