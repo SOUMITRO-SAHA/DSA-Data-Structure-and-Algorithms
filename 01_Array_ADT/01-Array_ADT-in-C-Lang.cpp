@@ -7,8 +7,9 @@
  *  Details about the Functions :
  *
  *  Display() -> It will print all the Array element one by one.
- *  Add() / append() -> It's basically add the element to the end of the array.
+ *  Add() / Append() -> It's basically add the element to the end of the array.
  *  Insert() -> It will insert a number at any given index.
+ *  Delete() --> It will delete a value/element at given index.
  *
  *
  *	 Notes:
@@ -38,13 +39,45 @@ void Display(Array arr)
 }
 
 // Function for Add / Append:
-void append(Array *arr, int x)
+void Append(Array *arr, int x)
 {
     if (arr->length < arr->size)
     {
         arr->A[arr->length] = x;
         arr->length++;
     }
+}
+
+// Function for Insert :
+void Insert(Array *arr, int index, int x)
+{
+    if (index >= 0 && index <= arr->length)
+    {
+        for (int i = arr->length; i > index; i--)
+        {
+            // Shifting the Elements
+            arr->A[i] = arr->A[i - 1];
+        }
+        arr->A[index] = x;
+        arr->length++;
+    }
+}
+
+// Function for Delete() function :
+int Delete(Array *arr, int index)
+{
+    int x = 0;
+    if (index >= 0 && index <= arr->length - 1)
+    {
+        x = arr->A[index];
+        for (int i = index; i < arr->length - 1; i++)
+        {
+            arr->A[i] = arr->A[i + 1];
+        }
+        arr->length--;
+        return x;
+    }
+    return 0;
 }
 
 int main()
@@ -77,7 +110,19 @@ int main()
     Display(arr);
 
     // Calling the append() function:
-    append(&arr, 20);
+    Append(&arr, 20);
+
+    // Displaying the Array after append() function:
+    Display(arr);
+
+    // Calling the Insert() function :
+    Insert(&arr, 3, 33); // Inserting 33 at Index 3.
+
+    // Displaying the Array:
+    Display(arr);
+
+    // Calling the Delete() function :
+    Delete(&arr, 3);
 
     // Displaying the Array:
     Display(arr);
