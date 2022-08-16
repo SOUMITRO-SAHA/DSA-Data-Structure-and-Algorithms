@@ -69,13 +69,15 @@ So, data structure and a set of operations together we can call it ADT.
 **Operations :**
 1. Display();           --> O(n);
 2. add() / append();    --> O(1);
-3. insert(index X);     --> O(n);
-4. delete(index);
-5. search(X);
+3. insert(index X);     --> O(n);   //Worst Case when index = 0; Best Case when index = arr.length(last element).
+4. delete(index);       --> O(n);   //Worst Case when index = 0; Best Case when index = arr.length(last element).
+5. search(X);           
+   1. Linear Search
+   2. Binary Search
 6. get(index);
 7. set(index, X);
 8. max() / min();
-9. reverse();
+9.  reverse();
 10. shift() / rotate();
 
 [[Notes for C Language]](./01_Array_ADT/01-Array_ADT-in-C-Lang.md)
