@@ -1,4 +1,4 @@
-  # Array ADT Note for C - Language : 
+  # Array ADT Note for C & C++ : 
 
   ## **Creating Array ADT Data Structure from Scratch :**
 
@@ -918,4 +918,70 @@ The key is found by Recursive Call at = 3
 
 [[c++ Language Source Code]](./Searching%20Algorithms/02-Binary_Search-in-C_CPP-Lang.cpp)
 
+<br>
 
+# Checking if the Array is Sorted or not :
+
+
+
+# Reversing an Array :
+
+There are two method for reversing an Array.
+
+1. Using an Auxiliary or Extra Array.
+2. Swapping the First and the Last elements and move to the next element
+
+## **1. Using an Auxiliary or Extra Array :**
+
+<div align = "center">
+ <img src="https://chercher.tech/images/java-questions/reverse-array-java-questions.png" alt="Using an Auxiliary Or Extra Array" />
+</div>
+
+<br>
+
+**Code** 
+
+```cpp
+
+```
+
+### **Time complexity :**  $O(n)$
+
+$$ A \to B :  \large n \\ 
+    B \to A : \large n \\
+    \text{---------------------} \\
+    \ \ \ \huge{2n}
+
+    \\
+
+    \large Time-Complexity : O(n)
+$$
+
+
+<br>
+
+## **2. Swapping the First and the Last elements and move to the next element :**
+
+<div align = "center">
+ <img src="https://media.geeksforgeeks.org/wp-content/uploads/arra34.jpg" alt="Swapping the Elements" />
+</div>
+
+<br>
+
+### **Time complexity :**  $O(n)$ [Here, We don't need any extra Auxiliary Space]
+
+<br>
+
+# Shifting :
+
+There are two shifting mehthod :
+1. Left Shifting
+2. Right Shifting
+
+<br>
+
+# Rotation :
+
+There are two types of rotation available :
+1. Left rotation
+2. Right rotation
