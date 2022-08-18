@@ -244,6 +244,247 @@ Elemnts are : 2   3   4   5   6
 Elemnts are : 2   3   4   6
 ```
 
+## **Get() function :**
+
+It basically returns the element at given index. Hence, Get the element.
+
+```cpp
+// Function for Get and elemnt:
+int Get(Array arr, int index)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr.length)
+        return arr.A[index];
+    return -1;
+}
+```
+
+## **Set() function :**
+
+It basically allow you the set / Chenge the value of an element of given index.
+
+```cpp
+// Set() function : [For setting an element at place of the given index]
+void Set(Array *arr, int index, int x)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr->length)
+        arr->A[index] = x;
+}
+```
+
+## **Max() function :**
+
+It's going to return the max element in the Array;
+
+```cpp
+// Max() Function: [To finde the Max elemntn in the Array]
+int Max(Array arr)
+{
+    int max = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (max < arr.A[i])
+        {
+            max = arr.A[i];
+        }
+    }
+    return max;
+}
+```
+
+## **Min() function :**
+
+It's going the return the min element in the Array.
+
+```cpp
+// Min() Function: [To finde the Min elemntn in the Array]
+int Min(Array arr)
+{
+    int min = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (min > arr.A[i])
+        {
+            min = arr.A[i];
+        }
+    }
+    return min;
+}
+```
+
+## **Sum() function :**
+
+It's going to return the sum of all the elements in the Array.
+
+```cpp
+// Sum() Function : [To find the sum of all the element]
+int Sum(Array arr)
+{
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++)
+    {
+        sum += arr.A[i];
+    }
+    return sum;
+}
+```
+
+## **Average() function :**
+
+It's going to return the avg. of all the elements in the Array.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Array
+{
+    // int *A;
+    int A[20];
+    int size;
+    int length;
+};
+
+// Function Displaying the Array :
+void Display(Array arr)
+{
+    int i;
+    cout << "Elemnts are : ";
+    for (int i = 0; i < arr.length; i++)
+    {
+        cout << arr.A[i] << "   ";
+    }
+    cout << endl;
+}
+
+// Average() functon : [To findt the Avg. of all the elements in the array]
+float Average(Array arr)
+{
+    int sum = Sum(arr); // Calling the sum function;
+    float totalLengthOfArray = arr.length;
+
+    return sum / totalLengthOfArray;
+}
+```
+### Implementation of the Above Functions :
+
+```cpp
+
+
+// Function for Get and elemnt:
+int Get(Array arr, int index)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr.length)
+        return arr.A[index];
+    return -1;
+}
+
+// Set() function : [For setting an element at place of the given index]
+
+void Set(Array *arr, int index, int x)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr->length)
+        arr->A[index] = x;
+}
+
+// Max() Function: [To finde the Max elemntn in the Array]
+int Max(Array arr)
+{
+    int max = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (max < arr.A[i])
+        {
+            max = arr.A[i];
+        }
+    }
+    return max;
+}
+
+// Min() Function: [To finde the Min elemntn in the Array]
+int Min(Array arr)
+{
+    int min = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (min > arr.A[i])
+        {
+            min = arr.A[i];
+        }
+    }
+    return min;
+}
+
+// Sum() Function : [To find the sum of all the element]
+int Sum(Array arr)
+{
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++)
+    {
+        sum += arr.A[i];
+    }
+    return sum;
+}
+
+// Average() functon : [To findt the Avg. of all the elements in the array]
+float Average(Array arr)
+{
+    int sum = Sum(arr); // Calling the sum function;
+    float totalLengthOfArray = arr.length;
+
+    return sum / totalLengthOfArray;
+}
+
+int main()
+{
+    Array arr = {{2, 3, 4, 5, 6}, 20, 5};
+
+    // Displaying the Array:
+    Display(arr);
+
+    // ################# [ Get(), Set (),Max(), Min(), Sum(), Average()] ############ //
+
+    // Calling the Get() Function :
+    cout << "Get(arr, index) : " << Get(arr, 4) << endl;
+
+    // Calling Set() :
+    cout << "Set(Array *arr, int index, int x) : " << endl;
+    Set(&arr, 4, 99);
+    // Displaying the Array:
+    Display(arr);
+
+    cout << "Max(Array arr): " << Max(arr) << endl;
+    cout << "Min(Array arr): " << Min(arr) << endl;
+    cout << "Sum(Array arr): " << Sum(arr) << endl;
+    cout << "Average(Array arr): " << Average(arr) << endl;
+
+    return 0;
+}
+```
+
+### Output :
+```bash
+Elemnts are : 2   3   4   5   6   
+
+Get(arr, index) : 6
+
+Set(Array *arr, int index, int x) : 
+Elemnts are : 2   3   4   5   99   
+
+Max(Array arr): 99
+Min(Array arr): 2
+Sum(Array arr): 113
+Average(Array arr): 22.6
+```
+
+
 [[Main Source Code]](./01-Array_ADT-in-C-Lang.cpp)
 
 # **Linear Search :**
