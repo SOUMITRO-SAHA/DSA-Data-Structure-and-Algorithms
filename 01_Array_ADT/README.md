@@ -490,3 +490,191 @@ Key is found at Index 4
 ```
 
 [[Main Code of Linear Search]](./Searching%20Algorithms/01-Linear_Search-in-C-Lang.cpp)
+
+
+# **Binary Search :**
+
+Binary Search is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(log n).
+
+## Binary Search Algorithm :
+
+The basic steps to perform Binary Search are:
+- Begin with the mid element of the whole array as a search key.
+- If the value of the search key is equal to the item then return an idex of the search key.
+- Or if the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half.
+- Otherwise, narrow it to the upper half.
+- Repeatedly check from the second point until the value is found or the interval is empty.
+
+### Binary Search Algorithm can be implemented in the following two ways :
+1. Iterative Method.
+2. Recursive Method.
+
+## 1. Iteration Method :
+```cpp
+// Binary Search Function:
+int BinarySearch(Array arr, int key)
+{
+    int low = 0;
+    int high = arr.length - 1;
+    while (low <= high)
+    {
+        int mid = (low + high) / 2;
+        if (key == arr.A[mid])
+            return mid;
+
+        else if (key < arr.A[mid])
+        {
+            high = mid - 1;
+        }
+        else if (key > arr.A[mid])
+        {
+            low = mid + 1;
+        }
+    }
+    return -1;
+}
+```
+## 2. Recursive Method :
+```cpp
+// Binary Search function Using Recursion :
+int RecursiveBinarySearch(int a[], int l, int h, int key)
+{
+    int mid;
+    if (l <= h)
+    {
+        mid = (l + h) / 2;
+        if (key == a[mid])
+            return mid;
+        else if (key < a[mid])
+            return RecursiveBinarySearch(a, l, mid - 1, key);
+        else
+            return RecursiveBinarySearch(a, mid + 1, h, key);
+    }
+    return -1;
+}
+```
+
+### Illustration of Binary Search Algorithm :
+
+<!-- Binary Search Image -->
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220309171621/BinarySearch.png)
+
+[[**Source**]](https://www.geeksforgeeks.org/binary-search/)
+
+### Detailed Binary Search Algorithm :
+
+#### CPP Code :
+```cpp
+/****************************************************************************
+ *	Binary Search :
+ *      to perform Binary Search we need 3 things :
+ *          1. low
+ *          2. high
+ *          3. mid = (low + high) /2 ;
+***************************************************************************/
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Array
+{
+    int A[20];
+    int size;
+    int length;
+};
+
+// Function Displaying the Array :
+void Display(Array arr)
+{
+    int i;
+    cout << "Elemnts are : ";
+    for (int i = 0; i < arr.length; i++)
+    {
+        cout << arr.A[i] << "   ";
+    }
+    cout << endl;
+}
+
+// Function for Swapping the Elements :
+void swap(int *x, int *y)
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+// Binary Search Function:
+int BinarySearch(Array arr, int key)
+{
+    int low = 0;
+    int high = arr.length - 1;
+    while (low <= high)
+    {
+        int mid = (low + high) / 2;
+        if (key == arr.A[mid])
+            return mid;
+
+        else if (key < arr.A[mid])
+        {
+            high = mid - 1;
+        }
+        else if (key > arr.A[mid])
+        {
+            low = mid + 1;
+        }
+    }
+    return -1;
+}
+
+// Binary Search function Using Recursion :
+int RecursiveBinarySearch(int a[], int l, int h, int key)
+{
+    int mid;
+    if (l <= h)
+    {
+        mid = (l + h) / 2;
+        if (key == a[mid])
+            return mid;
+        else if (key < a[mid])
+            return RecursiveBinarySearch(a, l, mid - 1, key);
+        else
+            return RecursiveBinarySearch(a, mid + 1, h, key);
+    }
+    return -1;
+}
+
+int main()
+{
+    Array arr = {{2, 5, 7, 9, 13, 17, 19}, 20, 7};
+    // Displaying the Array:
+    Display(arr);
+
+    int key;
+    cout << "Enter the Key ";
+    cin >> key;
+
+    // Calling the Binary Search Function :
+    cout << "The key is found at = " << BinarySearch(arr, key);
+    cout << endl;
+    // Calling the Recursive Binary Search Function:
+    cout << "The key is found by Recursive Call at = " << RecursiveBinarySearch(arr.A, 0, arr.length, key);
+
+    return 0;
+}
+```
+
+#### Output :
+
+```bash
+Elemnts are : 2   5   7   9   13   17   19
+Enter the Key 9
+The key is found at = 3
+The key is found by Recursive Call at = 3
+```
+## **Time Complexity: O(log n)**
+
+## **Auxiliary Space : O(1)**
+
+[[c++ Language Source Code]](./Searching%20Algorithms/02-Binary_Search-in-C_CPP-Lang.cpp)
+
+
