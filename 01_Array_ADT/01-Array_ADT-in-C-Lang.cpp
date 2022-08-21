@@ -10,7 +10,11 @@
  *  Add() / Append() -> It's basically add the element to the end of the array.
  *  Insert() -> It will insert a number at any given index.
  *  Delete() --> It will delete a value/element at given index.
- *
+ *  Get() --> Return the element for given index.
+ *  Set() -->
+ *  Average() -->
+ *  Max() -->
+ *  Min() -->
  *
  *	 Notes:
  *  Demo Array data : 10, 20, 30, 40, 50
@@ -80,6 +84,74 @@ int Delete(Array *arr, int index)
     return 0;
 }
 
+// Function for Get and elemnt:
+int Get(Array arr, int index)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr.length)
+        return arr.A[index];
+    return -1;
+}
+
+// Set() function : [For setting an element at place of the given index]
+
+void Set(Array *arr, int index, int x)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr->length)
+        arr->A[index] = x;
+}
+
+// Max() Function: [To finde the Max elemntn in the Array]
+int Max(Array arr)
+{
+    int max = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (max < arr.A[i])
+        {
+            max = arr.A[i];
+        }
+    }
+    return max;
+}
+
+// Min() Function: [To finde the Min elemntn in the Array]
+int Min(Array arr)
+{
+    int min = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (min > arr.A[i])
+        {
+            min = arr.A[i];
+        }
+    }
+    return min;
+}
+
+// Sum() Function : [To find the sum of all the element]
+int Sum(Array arr)
+{
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++)
+    {
+        sum += arr.A[i];
+    }
+    return sum;
+}
+
+// Average() functon : [To findt the Avg. of all the elements in the array]
+float Average(Array arr)
+{
+    int sum = Sum(arr); // Calling the sum function;
+    float totalLengthOfArray = arr.length;
+
+    return sum / totalLengthOfArray;
+}
+
 int main()
 {
     // Method -1:
@@ -109,6 +181,7 @@ int main()
     // Displaying the Array:
     Display(arr);
 
+    /*
     // Calling the append() function:
     Append(&arr, 20);
 
@@ -126,6 +199,23 @@ int main()
 
     // Displaying the Array:
     Display(arr);
+    */
+
+    // ################# [ Get(), Set (),Max(), Min(), Sum(), Average()] ############ //
+
+    // Calling the Get() Function :
+    cout << "Get(arr, index) : " << Get(arr, 9) << endl;
+
+    // Calling Set() :
+    cout << "Set(Array *arr, int index, int x) : " << endl;
+    Set(&arr, 4, 99);
+    // Displaying the Array:
+    Display(arr);
+
+    cout << "Max(Array arr): " << Max(arr) << endl;
+    cout << "Min(Array arr): " << Min(arr) << endl;
+    cout << "Sum(Array arr): " << Sum(arr) << endl;
+    cout << "Average(Array arr): " << Average(arr) << endl;
 
     return 0;
 }

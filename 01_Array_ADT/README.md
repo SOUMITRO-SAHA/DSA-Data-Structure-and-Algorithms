@@ -1,4 +1,4 @@
-  # Array ADT Note for C - Language : 
+  # Array ADT Note for C & C++ : 
 
   ## **Creating Array ADT Data Structure from Scratch :**
 
@@ -243,6 +243,247 @@ int main()
 Elemnts are : 2   3   4   5   6   
 Elemnts are : 2   3   4   6
 ```
+
+## **Get() function :**
+
+It basically returns the element at given index. Hence, Get the element.
+
+```cpp
+// Function for Get and elemnt:
+int Get(Array arr, int index)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr.length)
+        return arr.A[index];
+    return -1;
+}
+```
+
+## **Set() function :**
+
+It basically allow you the set / Chenge the value of an element of given index.
+
+```cpp
+// Set() function : [For setting an element at place of the given index]
+void Set(Array *arr, int index, int x)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr->length)
+        arr->A[index] = x;
+}
+```
+
+## **Max() function :**
+
+It's going to return the max element in the Array;
+
+```cpp
+// Max() Function: [To finde the Max elemntn in the Array]
+int Max(Array arr)
+{
+    int max = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (max < arr.A[i])
+        {
+            max = arr.A[i];
+        }
+    }
+    return max;
+}
+```
+
+## **Min() function :**
+
+It's going the return the min element in the Array.
+
+```cpp
+// Min() Function: [To finde the Min elemntn in the Array]
+int Min(Array arr)
+{
+    int min = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (min > arr.A[i])
+        {
+            min = arr.A[i];
+        }
+    }
+    return min;
+}
+```
+
+## **Sum() function :**
+
+It's going to return the sum of all the elements in the Array.
+
+```cpp
+// Sum() Function : [To find the sum of all the element]
+int Sum(Array arr)
+{
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++)
+    {
+        sum += arr.A[i];
+    }
+    return sum;
+}
+```
+
+## **Average() function :**
+
+It's going to return the avg. of all the elements in the Array.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Array
+{
+    // int *A;
+    int A[20];
+    int size;
+    int length;
+};
+
+// Function Displaying the Array :
+void Display(Array arr)
+{
+    int i;
+    cout << "Elemnts are : ";
+    for (int i = 0; i < arr.length; i++)
+    {
+        cout << arr.A[i] << "   ";
+    }
+    cout << endl;
+}
+
+// Average() functon : [To findt the Avg. of all the elements in the array]
+float Average(Array arr)
+{
+    int sum = Sum(arr); // Calling the sum function;
+    float totalLengthOfArray = arr.length;
+
+    return sum / totalLengthOfArray;
+}
+```
+### Implementation of the Above Functions :
+
+```cpp
+
+
+// Function for Get and elemnt:
+int Get(Array arr, int index)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr.length)
+        return arr.A[index];
+    return -1;
+}
+
+// Set() function : [For setting an element at place of the given index]
+
+void Set(Array *arr, int index, int x)
+{
+    // Checking whether the given index is valid or not:
+    if (index >= 0 && index < arr->length)
+        arr->A[index] = x;
+}
+
+// Max() Function: [To finde the Max elemntn in the Array]
+int Max(Array arr)
+{
+    int max = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (max < arr.A[i])
+        {
+            max = arr.A[i];
+        }
+    }
+    return max;
+}
+
+// Min() Function: [To finde the Min elemntn in the Array]
+int Min(Array arr)
+{
+    int min = arr.A[0];
+    // looping through to find the Max elemnt in the Array:
+    for (int i = 1; i < arr.length; i++)
+    {
+        if (min > arr.A[i])
+        {
+            min = arr.A[i];
+        }
+    }
+    return min;
+}
+
+// Sum() Function : [To find the sum of all the element]
+int Sum(Array arr)
+{
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++)
+    {
+        sum += arr.A[i];
+    }
+    return sum;
+}
+
+// Average() functon : [To findt the Avg. of all the elements in the array]
+float Average(Array arr)
+{
+    int sum = Sum(arr); // Calling the sum function;
+    float totalLengthOfArray = arr.length;
+
+    return sum / totalLengthOfArray;
+}
+
+int main()
+{
+    Array arr = {{2, 3, 4, 5, 6}, 20, 5};
+
+    // Displaying the Array:
+    Display(arr);
+
+    // ################# [ Get(), Set (),Max(), Min(), Sum(), Average()] ############ //
+
+    // Calling the Get() Function :
+    cout << "Get(arr, index) : " << Get(arr, 4) << endl;
+
+    // Calling Set() :
+    cout << "Set(Array *arr, int index, int x) : " << endl;
+    Set(&arr, 4, 99);
+    // Displaying the Array:
+    Display(arr);
+
+    cout << "Max(Array arr): " << Max(arr) << endl;
+    cout << "Min(Array arr): " << Min(arr) << endl;
+    cout << "Sum(Array arr): " << Sum(arr) << endl;
+    cout << "Average(Array arr): " << Average(arr) << endl;
+
+    return 0;
+}
+```
+
+### Output :
+```bash
+Elemnts are : 2   3   4   5   6   
+
+Get(arr, index) : 6
+
+Set(Array *arr, int index, int x) : 
+Elemnts are : 2   3   4   5   99   
+
+Max(Array arr): 99
+Min(Array arr): 2
+Sum(Array arr): 113
+Average(Array arr): 22.6
+```
+
 
 [[Main Source Code]](./01-Array_ADT-in-C-Lang.cpp)
 
@@ -677,4 +918,272 @@ The key is found by Recursive Call at = 3
 
 [[c++ Language Source Code]](./Searching%20Algorithms/02-Binary_Search-in-C_CPP-Lang.cpp)
 
+<br>
 
+<!-- Todo: Sorting Algorithm Start -->
+# Sorting Algorithm:
+
+## **Checking if the Array is Sorted or not :**
+
+This will return true / false.
+
+**Algorithm :**
+
+```cpp
+#include <bits/stdc++.h>
+#include "../00-CustomArray-HeaderFile.h"
+using namespace std;
+
+// isSorted() Function :
+bool isSorted(Array arr)
+{
+    for (int i = 0; i < arr.length - 1; i++)
+    {
+        if (arr.A[i] > arr.A[i + 1])
+            return 0;
+    }
+    return 1;
+}
+```
+**C++ Code :**
+
+```cpp
+// isSorted() Function :
+bool isSorted(Array arr)
+{
+    for (int i = 0; i < arr.length - 1; i++)
+    {
+        if (arr.A[i] > arr.A[i + 1])
+            return 0;
+    }
+    return 1;
+}
+
+int main()
+{
+    Array arr = {{1, 2, 3, 7, 8, 10, 12, 15, 18}, 20, 9};
+    // Displaying the Array:
+    Display(arr);
+
+    // Calling isSort() Function:
+    (isSorted(arr)) ? cout << "True" << endl : cout << "False" << endl;
+
+    return 0;
+}
+```
+
+#### Output :
+
+```shell
+1   2   3   7   8   10   12   15   18   
+True
+```
+
+## **Inserting and element in Sorted Position :**
+
+In this method the given/provided array must me sorted.Otherwise the insertion wouldn't work.
+
+**Algorithm :**
+
+```cpp
+// InsertElementAtSortedPosition() function;
+/* Given Array Must be Sorted */
+void InsertElementAtSortedPosition(Array *arr, int x)
+{
+    int i = arr->length - 1;
+    if (arr->length == arr->size)
+        return;
+    while (i >= 0 && arr->A[i] > x)
+    {
+        arr->A[i + 1] = arr->A[i];
+        i--;
+    }
+    arr->A[i + 1] = x;
+    arr->length++;
+}
+
+```
+
+**C++ Code :**
+
+```cpp
+#include <bits/stdc++.h>
+#include "../00-CustomArray-HeaderFile.h"
+using namespace std;
+
+// InsertElementAtSortedPosition() function;
+/* Given Array Must be Sorted */
+void InsertElementAtSortedPosition(Array *arr, int x)
+{
+    int i = arr->length - 1;
+    if (arr->length == arr->size)
+        return;
+    while (i >= 0 && arr->A[i] > x)
+    {
+        arr->A[i + 1] = arr->A[i];
+        i--;
+    }
+    arr->A[i + 1] = x;
+    arr->length++;
+}
+int main()
+{
+    Array arr = {{1, 2, 3, 7, 8, 10, 12, 15, 18}, 20, 9};
+    // Displaying the Array:
+    Display(arr);
+
+    // Calling InsertElementAtSortedPosition() :
+    InsertElementAtSortedPosition(&arr, 11);
+    // Displaying the Array:
+    Display(arr);
+
+    return 0;
+}
+```
+
+#### Output :
+
+```shell
+1   2   3   7   8   10   12   15   18   
+1   2   3   7   8   10   11   12   15   18 
+```
+
+## **Rearranging Positive and Negative Numbers :**
+
+Here we are gonna re-arrange the numbers accorting to the number line of Integer in sorted order.
+
+e.g. -
+$$ 
+-8 \ \ \ \ \ \ -3\ \ \ \ \ \ -1\ \ \ \ \ \ 0\ \ \ \ \ \ 3\ \ \ \ \ \ 5\ \ \ \ \ \ 7\ \ \ \ \ \ 19\ \ \ \ \ \ 31\ \
+$$
+
+It not necesseraly be in sorted order.
+
+This function only shifted the $-Ve$ to the left and $+Ve$ to the right.
+
+
+**Algorithm :**
+```cpp
+void rearrangingNumbers(Array *arr)
+{
+    int i = 0, j = arr->length - 1;
+    while (i < j)
+    {
+        while (arr->A[i] < 0)
+            i++;
+        while (arr->A[j] >= 0)
+            j--;
+
+        if (i < j)
+            swap(arr->A[i], arr->A[j]);
+    }
+}
+```
+
+**C++ Code :**
+
+```cpp
+#include <bits/stdc++.h>
+#include "../00-CustomArray-HeaderFile.h"
+using namespace std;
+
+void rearrangingNumbers(Array *arr)
+{
+    int i = 0, j = arr->length - 1;
+    while (i < j)
+    {
+        while (arr->A[i] < 0)
+            i++;
+        while (arr->A[j] >= 0)
+            j--;
+
+        if (i < j)
+            swap(arr->A[i], arr->A[j]);
+    }
+}
+
+main() {
+
+    Array arr1 = {{-2, 5, -9, 8, 3, -3, 0}, 20, 7};
+
+    // Displaying the Array:
+    Display(arr1);
+
+    // Calling rearranging function :
+    rearrangingNumbers(&arr1);
+    // Displaying the Array:
+    Display(arr1);
+}
+```
+
+#### Output :
+
+```shell
+-2   5   -9   8   3   -3   0   
+-2   -3   -9   8   3   5   0 
+```
+
+
+<!-- Todo: Sorting Algorithm End -->
+
+# Reversing an Array :
+
+There are two method for reversing an Array.
+
+1. Using an Auxiliary or Extra Array.
+2. Swapping the First and the Last elements and move to the next element
+
+## **1. Using an Auxiliary or Extra Array :**
+
+<div align = "center">
+ <img src="https://chercher.tech/images/java-questions/reverse-array-java-questions.png" alt="Using an Auxiliary Or Extra Array" />
+</div>
+
+<br>
+
+**Code** 
+
+```cpp
+
+```
+
+### **Time complexity :**  $O(n)$
+
+$$ A \to B :  \large n \\ 
+    B \to A : \large n \\
+    \text{---------------------} \\
+    \ \ \ \huge{2n}
+
+    \\
+
+    \large Time-Complexity : O(n)
+$$
+
+
+<br>
+
+## **2. Swapping the First and the Last elements and move to the next element :**
+
+<div align = "center">
+ <img src="https://media.geeksforgeeks.org/wp-content/uploads/arra34.jpg" alt="Swapping the Elements" />
+</div>
+
+<br>
+
+### **Time complexity :**  $O(n)$ [Here, We don't need any extra Auxiliary Space]
+
+<br>
+
+# Shifting :
+
+There are two shifting mehthod :
+1. Left Shifting
+2. Right Shifting
+
+<br>
+
+# Rotation :
+
+There are two types of rotation available :
+1. Left rotation
+2. Right rotation
