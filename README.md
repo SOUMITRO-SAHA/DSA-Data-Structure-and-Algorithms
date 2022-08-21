@@ -22,6 +22,7 @@ The choice of a good data structure makes it possible to perform a variety of cr
 
 **Classification of Data Structure :**
 ![Source Geeksforgeeks.org](https://media.geeksforgeeks.org/wp-content/uploads/20220520182504/ClassificationofDataStructure-660x347.jpg)
+
 [Source Geeksforgeeks.org](https://www.geeksforgeeks.org/data-structures/)
 
 #### Type of Data Structure :
@@ -80,9 +81,7 @@ So, data structure and a set of operations together we can call it ADT.
 9.  reverse();
 10. shift() / rotate();
 
-[[Notes for C Language]](./01_Array_ADT/01-Array_ADT-in-C-Lang.md)
-
-[[Notes for C++ Language]](./01_Array_ADT/01-Array_ADT-in-CPP-Lang.md)
+[[ Notes for C & C++ Language ]](./01_Array_ADT/README.md)
 
 
 

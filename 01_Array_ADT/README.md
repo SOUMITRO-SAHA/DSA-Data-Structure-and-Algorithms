@@ -1053,9 +1053,7 @@ int main()
 Here we are gonna re-arrange the numbers accorting to the number line of Integer in sorted order.
 
 e.g. -
-$$ 
--8 \ \ \ \ \ \ -3\ \ \ \ \ \ -1\ \ \ \ \ \ 0\ \ \ \ \ \ 3\ \ \ \ \ \ 5\ \ \ \ \ \ 7\ \ \ \ \ \ 19\ \ \ \ \ \ 31\ \
-$$
+$$-8 \ \ \ \ \ \ -3\ \ \ \ \ \ -1\ \ \ \ \ \ 0\ \ \ \ \ \ 3\ \ \ \ \ \ 5\ \ \ \ \ \ 7\ \ \ \ \ \ 19\ \ \ \ \ \ 31\ \$$
 
 It not necesseraly be in sorted order.
 
@@ -1123,6 +1121,15 @@ main() {
 -2   -3   -9   8   3   5   0 
 ```
 
+## **Merging Arrays :**
+
+In this process we are going to merge two or more Arrays into a single Array in sorted Order.
+
+**Algorithm :**
+
+```cpp
+
+```
 
 <!-- Todo: Sorting Algorithm End -->
 
@@ -1149,15 +1156,14 @@ There are two method for reversing an Array.
 
 ### **Time complexity :**  $O(n)$
 
-$$ A \to B :  \large n \\ 
+$$A \to B :  \large n \\ 
     B \to A : \large n \\
     \text{---------------------} \\
     \ \ \ \huge{2n}
 
     \\
 
-    \large Time-Complexity : O(n)
-$$
+    \large Time-Complexity : O(n)$$
 
 
 <br>
