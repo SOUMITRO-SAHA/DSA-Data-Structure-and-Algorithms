@@ -920,9 +920,211 @@ The key is found by Recursive Call at = 3
 
 <br>
 
-# Checking if the Array is Sorted or not :
+<!-- Todo: Sorting Algorithm Start -->
+# Sorting Algorithm:
+
+## **Checking if the Array is Sorted or not :**
+
+This will return true / false.
+
+**Algorithm :**
+
+```cpp
+#include <bits/stdc++.h>
+#include "../00-CustomArray-HeaderFile.h"
+using namespace std;
+
+// isSorted() Function :
+bool isSorted(Array arr)
+{
+    for (int i = 0; i < arr.length - 1; i++)
+    {
+        if (arr.A[i] > arr.A[i + 1])
+            return 0;
+    }
+    return 1;
+}
+```
+**C++ Code :**
+
+```cpp
+// isSorted() Function :
+bool isSorted(Array arr)
+{
+    for (int i = 0; i < arr.length - 1; i++)
+    {
+        if (arr.A[i] > arr.A[i + 1])
+            return 0;
+    }
+    return 1;
+}
+
+int main()
+{
+    Array arr = {{1, 2, 3, 7, 8, 10, 12, 15, 18}, 20, 9};
+    // Displaying the Array:
+    Display(arr);
+
+    // Calling isSort() Function:
+    (isSorted(arr)) ? cout << "True" << endl : cout << "False" << endl;
+
+    return 0;
+}
+```
+
+#### Output :
+
+```shell
+1   2   3   7   8   10   12   15   18   
+True
+```
+
+## **Inserting and element in Sorted Position :**
+
+In this method the given/provided array must me sorted.Otherwise the insertion wouldn't work.
+
+**Algorithm :**
+
+```cpp
+// InsertElementAtSortedPosition() function;
+/* Given Array Must be Sorted */
+void InsertElementAtSortedPosition(Array *arr, int x)
+{
+    int i = arr->length - 1;
+    if (arr->length == arr->size)
+        return;
+    while (i >= 0 && arr->A[i] > x)
+    {
+        arr->A[i + 1] = arr->A[i];
+        i--;
+    }
+    arr->A[i + 1] = x;
+    arr->length++;
+}
+
+```
+
+**C++ Code :**
+
+```cpp
+#include <bits/stdc++.h>
+#include "../00-CustomArray-HeaderFile.h"
+using namespace std;
+
+// InsertElementAtSortedPosition() function;
+/* Given Array Must be Sorted */
+void InsertElementAtSortedPosition(Array *arr, int x)
+{
+    int i = arr->length - 1;
+    if (arr->length == arr->size)
+        return;
+    while (i >= 0 && arr->A[i] > x)
+    {
+        arr->A[i + 1] = arr->A[i];
+        i--;
+    }
+    arr->A[i + 1] = x;
+    arr->length++;
+}
+int main()
+{
+    Array arr = {{1, 2, 3, 7, 8, 10, 12, 15, 18}, 20, 9};
+    // Displaying the Array:
+    Display(arr);
+
+    // Calling InsertElementAtSortedPosition() :
+    InsertElementAtSortedPosition(&arr, 11);
+    // Displaying the Array:
+    Display(arr);
+
+    return 0;
+}
+```
+
+#### Output :
+
+```shell
+1   2   3   7   8   10   12   15   18   
+1   2   3   7   8   10   11   12   15   18 
+```
+
+## **Rearranging Positive and Negative Numbers :**
+
+Here we are gonna re-arrange the numbers accorting to the number line of Integer in sorted order.
+
+e.g. -
+$$ 
+-8 \ \ \ \ \ \ -3\ \ \ \ \ \ -1\ \ \ \ \ \ 0\ \ \ \ \ \ 3\ \ \ \ \ \ 5\ \ \ \ \ \ 7\ \ \ \ \ \ 19\ \ \ \ \ \ 31\ \
+$$
+
+It not necesseraly be in sorted order.
+
+This function only shifted the $-Ve$ to the left and $+Ve$ to the right.
 
 
+**Algorithm :**
+```cpp
+void rearrangingNumbers(Array *arr)
+{
+    int i = 0, j = arr->length - 1;
+    while (i < j)
+    {
+        while (arr->A[i] < 0)
+            i++;
+        while (arr->A[j] >= 0)
+            j--;
+
+        if (i < j)
+            swap(arr->A[i], arr->A[j]);
+    }
+}
+```
+
+**C++ Code :**
+
+```cpp
+#include <bits/stdc++.h>
+#include "../00-CustomArray-HeaderFile.h"
+using namespace std;
+
+void rearrangingNumbers(Array *arr)
+{
+    int i = 0, j = arr->length - 1;
+    while (i < j)
+    {
+        while (arr->A[i] < 0)
+            i++;
+        while (arr->A[j] >= 0)
+            j--;
+
+        if (i < j)
+            swap(arr->A[i], arr->A[j]);
+    }
+}
+
+main() {
+
+    Array arr1 = {{-2, 5, -9, 8, 3, -3, 0}, 20, 7};
+
+    // Displaying the Array:
+    Display(arr1);
+
+    // Calling rearranging function :
+    rearrangingNumbers(&arr1);
+    // Displaying the Array:
+    Display(arr1);
+}
+```
+
+#### Output :
+
+```shell
+-2   5   -9   8   3   -3   0   
+-2   -3   -9   8   3   5   0 
+```
+
+
+<!-- Todo: Sorting Algorithm End -->
 
 # Reversing an Array :
 

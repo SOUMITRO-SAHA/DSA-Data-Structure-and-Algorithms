@@ -17,3 +17,12 @@ void Display(Array arr)
     }
     cout << endl;
 }
+
+// Function for Swapping the Elements :
+void swap(int *x, int *y)
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
