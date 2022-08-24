@@ -82,7 +82,7 @@ So, data structure and a set of operations together we can call it ADT.
 
 [[Notes for C Language]](./01_Array_ADT/01-Array_ADT-in-C-Lang.md)
 
-[[Notes for C++ Language]](./01_Array_ADT/01-Array_ADT-in-CPP-Lang.md)
+[[Notes for C++ Language]](./01_Array_ADT/Converting%20C%20to%20C%2B%2B/Array-ADT-in-C%2B%2B.cpp)
 
 
 
