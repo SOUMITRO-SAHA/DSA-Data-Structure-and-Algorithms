@@ -21,7 +21,12 @@ A data structure in not only used for organizing the data. It is also used for p
 The choice of a good data structure makes it possible to perform a variety of critical operations effectively. An efficient data structure also uses minimum memory space and execution time to process the structure.
 
 **Classification of Data Structure :**
-![Source Geeksforgeeks.org](https://media.geeksforgeeks.org/wp-content/uploads/20220520182504/ClassificationofDataStructure-660x347.jpg)
+<div style ="text-align:center">
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220520182504/ClassificationofDataStructure-660x347.jpg)
+
+</div>
+
 [Source Geeksforgeeks.org](https://www.geeksforgeeks.org/data-structures/)
 
 #### Type of Data Structure :
@@ -54,7 +59,13 @@ The choice of a good data structure makes it possible to perform a variety of cr
 
 ## Essential C and C++ Concepts :
 
+
 #### Arrays Basics: (Todo: Work Pending...)
+
+
+## C++ STL :
+
+[[C++ STL Notes]](/C%2B%2B%20STL/README.md)
 
 ## Array ADT :
 

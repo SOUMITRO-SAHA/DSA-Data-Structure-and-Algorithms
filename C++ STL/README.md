@@ -306,3 +306,14 @@ size();
 > deques are guaranteed to store all its elements in contiguous storage locations : accessing elements in a deque by offsetting a pointer to another element causes undefined behavior.
 > 
 > Elements of a deque can be scattered in different chunks of storage.
+
+
+# Stack STL :
+
+# Queue STL :
+
+# Priority Queue STL :
+
+# Hash Table :
+
+In C++ unordered_map is known as Hash table.
