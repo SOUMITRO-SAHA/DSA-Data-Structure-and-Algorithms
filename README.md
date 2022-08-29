@@ -63,16 +63,12 @@ The choice of a good data structure makes it possible to perform a variety of cr
 
 [[C++ STL Notes]](C%2B%2B%20STL/CppSTL-notes.md)
 
-<br>
-
 ---
 
 # Essential C and C++ Concepts :
 
 
 ### 1. [[Arrays Basics]](/01_Array_ADT/Array_ADT-Notes.md)
-
-<br>
 
 ## Array ADT :
 
@@ -101,8 +97,6 @@ So, data structure and a set of operations together we can call it ADT.
 10. shift() / rotate();
 
 [[ Notes for C & C++ Language ]](./01_Array_ADT/README.md)
-
-<br>
 
 # Strings :
 

@@ -12,9 +12,9 @@ All the character that you find in the keyboard, there is some ASCII code availa
 > ASCII (American Standard Code for Information Interchange) is the most common character encoding format for text data in computers and on the internet. In standard ASCII-encoded data, there are unique values for 128 alphabetic, numeric or special additional characters and control codes.
 
 <br>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/ASCII-Table.svg" alt="" style="background-color: #fff; margin: 0 auto;padding: 10px 20px;width:100%; max-width: 800px">
-
+<div style="background-color: #fff; margin: 0 auto;padding: 10px 20px;width:100%; max-width: 800px">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/ASCII-Table.svg" alt="ASCII Code Chart" >
+</div>
 <br>
 
 ## Where do we use ASCII Code in our System :
