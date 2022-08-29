@@ -1,5 +1,7 @@
 # DSA (Data Structure and Algorithms)
+
 ***Description :*** 
+
 It is a repository of DSA "a complete guide to DSA". Here I convert each and every DS and Algorithms into C++, JavaScript, Java, and Python language and There may be other languages that will be added in future.
 
 ---
@@ -16,12 +18,17 @@ It is a repository of DSA "a complete guide to DSA". Here I convert each and eve
 ### What is Data Structure ?
 > A data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
 
-A data structure in not only used for organizing the data. It is also used for processing, retrieving, and Storing data. There are different basic and advanced types of data structures that area used in almost every programm or software system that has been developed. So we must have good knowledge about data structures.
+A data structure in not only used for organizing the data. It is also used for processing, retrieving, and Storing data. There are different basic and advanced types of data structures that area used in almost every programme or software system that has been developed. So we must have good knowledge about data structures.
 
 The choice of a good data structure makes it possible to perform a variety of critical operations effectively. An efficient data structure also uses minimum memory space and execution time to process the structure.
 
 **Classification of Data Structure :**
-![Source Geeksforgeeks.org](https://media.geeksforgeeks.org/wp-content/uploads/20220520182504/ClassificationofDataStructure-660x347.jpg)
+
+<div style ="text-align:center">
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220520182504/ClassificationofDataStructure-660x347.jpg)
+
+</div>
 
 [Source Geeksforgeeks.org](https://www.geeksforgeeks.org/data-structures/)
 
@@ -52,10 +59,20 @@ The choice of a good data structure makes it possible to perform a variety of cr
 
 [Source Geeksforgeeks.org](https://www.geeksforgeeks.org/introduction-to-data-structures/?ref=lbp)
 
+# C++ STL :
 
-## Essential C and C++ Concepts :
+[[C++ STL Notes]](C%2B%2B%20STL/CppSTL-notes.md)
 
-#### Arrays Basics: (Todo: Work Pending...)
+<br>
+
+---
+
+# Essential C and C++ Concepts :
+
+
+### 1. [[Arrays Basics]](/01_Array_ADT/Array_ADT-Notes.md)
+
+<br>
 
 ## Array ADT :
 
@@ -63,11 +80,13 @@ Array as **ABSTRACT DATA TYPE**. Abstract Data Types means representation of dat
 So, data structure and a set of operations together we can call it ADT.
 
 **Data :**
+
 1. Array space
 2. size
-3. length (Number of elemnets)
+3. length (Number of elements)
 
 **Operations :**
+
 1. Display();           --> O(n);
 2. add() / append();    --> O(1);
 3. insert(index X);     --> O(n);   //Worst Case when index = 0; Best Case when index = arr.length(last element).
@@ -83,5 +102,10 @@ So, data structure and a set of operations together we can call it ADT.
 
 [[ Notes for C & C++ Language ]](./01_Array_ADT/README.md)
 
+<br>
+
+# Strings :
+
+[[Strings Notes]](03-Strings/Strings.md)
 
 

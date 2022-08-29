@@ -34,7 +34,7 @@ struct Array
 void Display(Array arr)
 {
     int i;
-    cout << "Elemnts are : ";
+    cout << "elements are : ";
     for (int i = 0; i < arr.length; i++)
     {
         cout << arr.A[i] << "   ";
@@ -84,7 +84,7 @@ int Delete(Array *arr, int index)
     return 0;
 }
 
-// Function for Get and elemnt:
+// Function for Get and element:
 int Get(Array arr, int index)
 {
     // Checking whether the given index is valid or not:
@@ -102,11 +102,11 @@ void Set(Array *arr, int index, int x)
         arr->A[index] = x;
 }
 
-// Max() Function: [To finde the Max elemntn in the Array]
+// Max() Function: [To find the Max element in the Array]
 int Max(Array arr)
 {
     int max = arr.A[0];
-    // looping through to find the Max elemnt in the Array:
+    // looping through to find the Max element in the Array:
     for (int i = 1; i < arr.length; i++)
     {
         if (max < arr.A[i])
@@ -117,11 +117,11 @@ int Max(Array arr)
     return max;
 }
 
-// Min() Function: [To finde the Min elemntn in the Array]
+// Min() Function: [To find the Min element in the Array]
 int Min(Array arr)
 {
     int min = arr.A[0];
-    // looping through to find the Max elemnt in the Array:
+    // looping through to find the Max element in the Array:
     for (int i = 1; i < arr.length; i++)
     {
         if (min > arr.A[i])
@@ -143,7 +143,7 @@ int Sum(Array arr)
     return sum;
 }
 
-// Average() functon : [To findt the Avg. of all the elements in the array]
+// Average() function : [To find the Avg. of all the elements in the array]
 float Average(Array arr)
 {
     int sum = Sum(arr); // Calling the sum function;
