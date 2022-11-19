@@ -1,15 +1,16 @@
 import java.util.*;
 
-public class Main {
+public class Decimal_To_Binary___Binary_To_Decimal {
     public static void main(String[] args) {
-        System.out.println("Decimal to Binary ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        // binaryToDecimal();
         decimalToBinary(n);
     }
 
     // Binary to Decimal
     static void binaryToDecimal(int n) {
+        System.out.println("Binary to Decimal ");
         int p = 0;
         int decimal = 0;
         while (n > 0) {
@@ -22,6 +23,7 @@ public class Main {
 
     // Decimal to Binary
     static void decimalToBinary(int n) {
+        System.out.println("Decimal to Binary ");
         int p = 0;
         int binary = 0;
         while (n > 0) {
