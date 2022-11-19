@@ -1,6 +1,6 @@
 # C++ Standard Template Library (STL)
 
-The STL is a set of C++ template classes to probide common programming data structure and functions such as lists, stacks, arrays,etc. It is a library of container classes, algorithms, and iterators. It is a generalized library and so, its components are parameterized. Working knowledge of template Classes is a prerequisite for working with STL.
+The STL is a set of C++ template classes to provide common programming data structure and functions such as lists, stacks, arrays,etc. It is a library of container classes, algorithms, and iterators. It is a generalized library and so, its components are parameterized. Working knowledge of template Classes is a prerequisite for working with STL.
 
 > Similarly, In Java there is Java Collection.
 
@@ -55,13 +55,14 @@ The header algorithm defines a collection of functions specially designed to be 
 <br>
 # Pair in C++ STL :
 
->Pair is used to combine together two values that may be of different data types. Pair provides a way to store two heretogeneous objects as a single unit. It is basically used if we want to store tuples. The pair container is a simple container defined in `<utility>` header consisting of two data elements of objects.
+>Pair is used to combine together two values that may be of different data types. Pair provides a way to store two heterogeneous objects as a single unit. It is basically used if we want to store tuples. The pair container is a simple container defined in `<utility>` header consisting of two data elements of objects.
 
 - The first element is referenced as 'first' and the second element as 'second' and the order is fixed (first,second).
 - Pair can be assigned, copied, and compared. The array of objects allocated in a map or hash_map is of type 'pair' by default in which all the 'first' elements are unique keys associated with their 'second' value objects.
 - To access the elements, we use variable name followed by dot.operator followed by the keyword first or second.
 
-## Syntex :
+## Syntax :
+
 ```cpp
 pair(data_type1, data_type2) pair_name;
 ```
@@ -90,6 +91,7 @@ int main()
 }
 ```
 ## Output :
+
 ```shell
 100 G
 ```
@@ -101,6 +103,7 @@ int main()
 `pair (data_type1, data_type2) Pair_name (value1, value2) ;`
 
 ### Different ways to initialize pair:
+
 ```cpp
 pair p1;            //default
 pair p2(1, 'a');    //Initialized, different data type
@@ -109,6 +112,7 @@ pair p4(p3);        //Copy of p3
 ```
 
 ## **Member Functions**
+
 1. make_pair();
 2. swap();
 3. tie();
@@ -117,8 +121,11 @@ pair p4(p3);        //Copy of p3
 
 > This template function allows to create a value pair without writing the types explicitly.
 
-## **Syntex"**
-`Pair_name = make_pair(value1, value2);`
+## **Syntax**
+
+```bash
+Pair_name = make_pair(value1, value2);
+```
 
 ```cpp
 #include <iostream>
@@ -161,7 +168,8 @@ GeeksForGeeks is Best 4.56
 
 >This function swaps the contents of one pair object with the contents of another pair object. The pairs must be of the same type.
 
-### **syntax:**
+### **syntax :**
+
 `pair1.swap(pair2);`
 
 For two given pairs say pair1 and pair2 of the same type, the swap function will swap the pair1.first with pair2.first and pair1.second with pair2.second.

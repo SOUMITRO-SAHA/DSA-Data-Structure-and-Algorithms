@@ -2,7 +2,7 @@
 
   ## **Creating Array ADT Data Structure from Scratch :**
 
-**First Declearing a struct for Array (Basic Data Structure for Array ADT) :**
+**First Declaring a struct for Array (Basic Data Structure for Array ADT) :**
 
 ```cpp
 struct Array {
@@ -15,12 +15,11 @@ struct Array {
 **Function for Displaying all the elements in the Array :**
 
 ```cpp
-
-// Struct for Displaying the Array :
+// Function Displaying the Array :
 void Display(Array arr)
 {
     int i;
-    cout << "Elemnts are : ";
+    cout << "Elements are : ";
     for (int i = 0; i < arr.length; i++)
     {
         cout << arr.A[i] << "   ";
@@ -35,7 +34,7 @@ void Display(Array arr)
 ```cpp
 int main()
 {
-    //Declearing the Array:
+    //Declaring the Array:
     Array arr;
     cout << "Enter the size of the Array: ";
     cin >> arr.size;
@@ -51,7 +50,7 @@ int main()
         cin >> arr.A[i];
     }
 
-    //Setting the length to the actuall size of the Array.
+    //Setting the length to the actual size of the Array.
     arr.length = arr.size; 
 
     // Displaying the Array:
@@ -71,13 +70,13 @@ Enter all the Elements : 10 20 30 40 50
 ##### Output :
 
 ```bash
-Elemnts are : 10   20   30   40   50 
+Elements are : 10   20   30   40   50 
 ```
 
 ## Declearing and Initialising the Array simultaneously :
 
 
-To Decleare an Array and Initialise the Array simultaneously, We have to make some changes while we construct out Array structure.
+To Declare an Array and Initialise the Array simultaneously, We have to make some changes while we construct out Array structure.
 
 We have to change `int *A`  in the  ` struct Array`
 
@@ -108,7 +107,7 @@ int main(){
 ##### Output :
 
 ```bash
-Elemnts are : 2   3   4   5   6
+Elements are : 2   3   4   5   6
 ```
 
 ## **Add() / append() function :**
@@ -147,8 +146,8 @@ int main(){
 #### Output :
 
 ```bash
-Elemnts are : 2   3   4   5   6   
-Elemnts are : 2   3   4   5   6   20
+Elements are : 2   3   4   5   6   
+Elements are : 2   3   4   5   6   20
 ```
 
 ## **Insert() function :**
@@ -192,8 +191,8 @@ int main()
 #### Output:
 
 ```bash
-Elemnts are : 2   3   4   5   6   
-Elemnts are : 2   3   4   33   5   6 
+Elements are : 2   3   4   5   6   
+Elements are : 2   3   4   33   5   6 
 ```
 
 ## **Delete() function :**
@@ -240,8 +239,8 @@ int main()
 #### Output:
 
 ```bash
-Elemnts are : 2   3   4   5   6   
-Elemnts are : 2   3   4   6
+Elements are : 2   3   4   5   6   
+Elements are : 2   3   4   6
 ```
 
 ## **Get() function :**
@@ -249,7 +248,7 @@ Elemnts are : 2   3   4   6
 It basically returns the element at given index. Hence, Get the element.
 
 ```cpp
-// Function for Get and elemnt:
+// Function for Get and element:
 int Get(Array arr, int index)
 {
     // Checking whether the given index is valid or not:
@@ -261,7 +260,7 @@ int Get(Array arr, int index)
 
 ## **Set() function :**
 
-It basically allow you the set / Chenge the value of an element of given index.
+It basically allow you the set / Change the value of an element of given index.
 
 ```cpp
 // Set() function : [For setting an element at place of the given index]
@@ -278,11 +277,11 @@ void Set(Array *arr, int index, int x)
 It's going to return the max element in the Array;
 
 ```cpp
-// Max() Function: [To finde the Max elemntn in the Array]
+// Max() Function: [To find the Max element in the Array]
 int Max(Array arr)
 {
     int max = arr.A[0];
-    // looping through to find the Max elemnt in the Array:
+    // looping through to find the Max element in the Array:
     for (int i = 1; i < arr.length; i++)
     {
         if (max < arr.A[i])
@@ -299,11 +298,11 @@ int Max(Array arr)
 It's going the return the min element in the Array.
 
 ```cpp
-// Min() Function: [To finde the Min elemntn in the Array]
+// Min() Function: [To find the Min element in the Array]
 int Min(Array arr)
 {
     int min = arr.A[0];
-    // looping through to find the Max elemnt in the Array:
+    // looping through to find the Max element in the Array:
     for (int i = 1; i < arr.length; i++)
     {
         if (min > arr.A[i])
@@ -352,7 +351,7 @@ struct Array
 void Display(Array arr)
 {
     int i;
-    cout << "Elemnts are : ";
+    cout << "Elements are : ";
     for (int i = 0; i < arr.length; i++)
     {
         cout << arr.A[i] << "   ";
@@ -360,7 +359,7 @@ void Display(Array arr)
     cout << endl;
 }
 
-// Average() functon : [To findt the Avg. of all the elements in the array]
+// Average() function : [To find the Avg. of all the elements in the array]
 float Average(Array arr)
 {
     int sum = Sum(arr); // Calling the sum function;
@@ -374,7 +373,7 @@ float Average(Array arr)
 ```cpp
 
 
-// Function for Get and elemnt:
+// Function for Get and element:
 int Get(Array arr, int index)
 {
     // Checking whether the given index is valid or not:
@@ -392,11 +391,11 @@ void Set(Array *arr, int index, int x)
         arr->A[index] = x;
 }
 
-// Max() Function: [To finde the Max elemntn in the Array]
+// Max() Function: [To find the Max element in the Array]
 int Max(Array arr)
 {
     int max = arr.A[0];
-    // looping through to find the Max elemnt in the Array:
+    // looping through to find the Max element in the Array:
     for (int i = 1; i < arr.length; i++)
     {
         if (max < arr.A[i])
@@ -407,11 +406,11 @@ int Max(Array arr)
     return max;
 }
 
-// Min() Function: [To finde the Min elemntn in the Array]
+// Min() Function: [To find the Min element in the Array]
 int Min(Array arr)
 {
     int min = arr.A[0];
-    // looping through to find the Max elemnt in the Array:
+    // looping through to find the Max element in the Array:
     for (int i = 1; i < arr.length; i++)
     {
         if (min > arr.A[i])
@@ -433,7 +432,7 @@ int Sum(Array arr)
     return sum;
 }
 
-// Average() functon : [To findt the Avg. of all the elements in the array]
+// Average() function : [To find the Avg. of all the elements in the array]
 float Average(Array arr)
 {
     int sum = Sum(arr); // Calling the sum function;
@@ -471,12 +470,12 @@ int main()
 
 ### Output :
 ```bash
-Elemnts are : 2   3   4   5   6   
+Elements are : 2   3   4   5   6   
 
 Get(arr, index) : 6
 
 Set(Array *arr, int index, int x) : 
-Elemnts are : 2   3   4   5   99   
+Elements are : 2   3   4   5   99   
 
 Max(Array arr): 99
 Min(Array arr): 2
@@ -542,7 +541,7 @@ int main()
 ##### Output :
 
 ```bash
-Elemnts are : 10   20   30   40   50   
+Elements are : 10   20   30   40   50   
 Key is found at Index 1
 ```
 
@@ -559,7 +558,7 @@ void PrintResult(int result)
 
 #### **Improving the Linear-Search Algorithm :**
 
-It is observed that when we searching for any key element, then there is a posibility that we are going to search for the same element for the next time as well.
+It is observed that when we searching for any key element, then there is a possibility that we are going to search for the same element for the next time as well.
 
 ---
 
@@ -569,11 +568,11 @@ You have search for a particular book and you take out the book and read it agai
 
 Then, What is the possibility that again tomorrow you will search for the same book? 
 
-Here the posibility is more likely that you will search for the same book again.
+Here the possibility is more likely that you will search for the same book again.
 
 ---
 
-So, to improve the linear Search we have two opetions.
+So, to improve the linear Search we have two options.
 
   1. Transposition
   2. Move to Front/Move to Head
@@ -627,7 +626,7 @@ int main()
     // Calling the LinearSearch Function:
     int result = LinearSearch(arr, 20);
 
-    // Calling PrintResutl() function :
+    // Calling PrintResult() function :
     PrintResult(result);
 
     // **************** [Improved Linear Search] **************** //
@@ -640,7 +639,7 @@ int main()
     // Displaying the Array :
     Display(arr);
 
-    // Calling PrintResutl() function :
+    // Calling PrintResult() function :
     PrintResult(improvedResult1);
 }
 ```
@@ -648,9 +647,9 @@ int main()
 ##### Output :
 
 ```bash
-Elemnts are : 10   20   30   40   50
+Elements are : 10   20   30   40   50
 Key is found at Index 1
-Elemnts are : 10   20   30   50   40
+Elements are : 10   20   30   50   40
 Key is found at Index 4
 ```
 
@@ -701,7 +700,7 @@ int main()
     // Calling the LinearSearch Function:
     int result = LinearSearch(arr, 20);
 
-    // Calling PrintResutl() function :
+    // Calling PrintResult() function :
     PrintResult(result);
 
     // **************** [Improved Linear Search] **************** //
@@ -714,7 +713,7 @@ int main()
     // Displaying the Array :
     Display(arr);
 
-    // Calling PrintResutl() function :
+    // Calling PrintResult() function :
     PrintResult(improvedResult2);
 
     return 0;
@@ -724,9 +723,9 @@ int main()
 ##### Output :
 
 ```bash
-Elemnts are : 10   20   30   40   50   
+Elements are : 10   20   30   40   50   
 Key is found at Index 1
-Elemnts are : 50   20   30   40   10   
+Elements are : 50   20   30   40   10   
 Key is found at Index 4
 ```
 
@@ -751,6 +750,7 @@ The basic steps to perform Binary Search are:
 2. Recursive Method.
 
 ## 1. Iteration Method :
+
 ```cpp
 // Binary Search Function:
 int BinarySearch(Array arr, int key)
@@ -776,6 +776,7 @@ int BinarySearch(Array arr, int key)
 }
 ```
 ## 2. Recursive Method :
+
 ```cpp
 // Binary Search function Using Recursion :
 int RecursiveBinarySearch(int a[], int l, int h, int key)
@@ -827,7 +828,7 @@ struct Array
 void Display(Array arr)
 {
     int i;
-    cout << "Elemnts are : ";
+    cout << "Elements are : ";
     for (int i = 0; i < arr.length; i++)
     {
         cout << arr.A[i] << "   ";
@@ -907,7 +908,7 @@ int main()
 #### Output :
 
 ```bash
-Elemnts are : 2   5   7   9   13   17   19
+Elements are : 2   5   7   9   13   17   19
 Enter the Key 9
 The key is found at = 3
 The key is found by Recursive Call at = 3
@@ -1053,11 +1054,9 @@ int main()
 Here we are gonna re-arrange the numbers accorting to the number line of Integer in sorted order.
 
 e.g. -
-$$ 
--8 \ \ \ \ \ \ -3\ \ \ \ \ \ -1\ \ \ \ \ \ 0\ \ \ \ \ \ 3\ \ \ \ \ \ 5\ \ \ \ \ \ 7\ \ \ \ \ \ 19\ \ \ \ \ \ 31\ \
-$$
+$$-8 \ \ \ \ \ \ -3\ \ \ \ \ \ -1\ \ \ \ \ \ 0\ \ \ \ \ \ 3\ \ \ \ \ \ 5\ \ \ \ \ \ 7\ \ \ \ \ \ 19\ \ \ \ \ \ 31\ \$$
 
-It not necesseraly be in sorted order.
+It not necessarily be in sorted order.
 
 This function only shifted the $-Ve$ to the left and $+Ve$ to the right.
 
@@ -1123,6 +1122,15 @@ main() {
 -2   -3   -9   8   3   5   0 
 ```
 
+## **Merging Arrays :**
+
+In this process we are going to merge two or more Arrays into a single Array in sorted Order.
+
+**Algorithm :**
+
+```cpp
+
+```
 
 <!-- Todo: Sorting Algorithm End -->
 
@@ -1149,15 +1157,14 @@ There are two method for reversing an Array.
 
 ### **Time complexity :**  $O(n)$
 
-$$ A \to B :  \large n \\ 
+$$A \to B :  \large n \\ 
     B \to A : \large n \\
     \text{---------------------} \\
     \ \ \ \huge{2n}
 
     \\
 
-    \large Time-Complexity : O(n)
-$$
+    \large Time-Complexity : O(n)$$
 
 
 <br>
@@ -1176,7 +1183,8 @@ $$
 
 # Shifting :
 
-There are two shifting mehthod :
+There are two shifting method :
+
 1. Left Shifting
 2. Right Shifting
 
@@ -1187,3 +1195,9 @@ There are two shifting mehthod :
 There are two types of rotation available :
 1. Left rotation
 2. Right rotation
+
+<br>
+
+# Array Problems Sets :
+
+[[TopicWise Practice Question Sets]](Practice%20Questions%20Set/Array_Questions.md)
