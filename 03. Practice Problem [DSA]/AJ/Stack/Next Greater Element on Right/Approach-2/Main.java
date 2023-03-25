@@ -8,9 +8,9 @@ import java.io.*;
 
 class Solution {
 	// TC: O(N); SC: O(N)
-	public static long[] nextLargerElement(long[] arr, int n) {
+	public long[] nextLargerElement(long[] arr, int n) {
 		// Here, the stack will store the index of the elements:
-		Stack<Integer> st = new Stack<Integer>();
+		Stack<Integer> st = new Stack<>();
 		long[] nger = new long[arr.length];
 
 		// The loop will iterate from left to right:
@@ -40,13 +40,13 @@ class Solution {
 class Main {
     public static void main (String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		    int n = Integer.parseInt(br.readLine().trim());
-		    String inputLine[] = br.readLine().trim().split(" ");
-		    long[] arr = new long[n];
-		    for(int i=0; i<n; i++)arr[i]=Long.parseLong(inputLine[i]);
-		    long[] res = new Solution().nextLargerElement(arr, n);
-		    for (int i = 0; i < n; i++) 
-		        System.out.print(res[i] + " ");
-		    System.out.println();
+		int n = Integer.parseInt(br.readLine().trim());
+		String inputLine[] = br.readLine().trim().split(" ");
+		long[] arr = new long[n];
+		for(int i=0; i<n; i++)arr[i]=Long.parseLong(inputLine[i]);
+		long[] res = new Solution().nextLargerElement(arr, n);
+		for (int i = 0; i < n; i++) 
+			System.out.print(res[i] + " ");
+		System.out.println();
 	}
 }

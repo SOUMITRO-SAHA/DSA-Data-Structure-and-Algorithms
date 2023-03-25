@@ -4,12 +4,11 @@
  * Right to Left [Traversal]
  */
 import java.util.*;
-import java.lang.*;
 import java.io.*;
 
 class Solution{
 	// TC: O(N); SC: O(N)
-    public static long[] nextLargerElement(long[] arr, int n){ 
+    public long[] nextLargerElement(long[] arr, int n){ 
         // We will start traversing from the right
         Stack<Long> stack = new Stack<Long>();
 
@@ -38,13 +37,13 @@ class Solution{
 class Main {
     public static void main (String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		    int n = Integer.parseInt(br.readLine().trim());
-		    String inputLine[] = br.readLine().trim().split(" ");
-		    long[] arr = new long[n];
-		    for(int i=0; i<n; i++)arr[i]=Long.parseLong(inputLine[i]);
-		    long[] res = new Solution().nextLargerElement(arr, n);
-		    for (int i = 0; i < n; i++) 
-		        System.out.print(res[i] + " ");
-		    System.out.println();
+        int n = Integer.parseInt(br.readLine().trim());
+        String inputLine[] = br.readLine().trim().split(" ");
+        long[] arr = new long[n];
+        for(int i=0; i<n; i++)arr[i]=Long.parseLong(inputLine[i]);
+        long[] res = new Solution().nextLargerElement(arr, n);
+        for (int i = 0; i < n; i++) 
+            System.out.print(res[i] + " ");
+        System.out.println();
 	}
 }
